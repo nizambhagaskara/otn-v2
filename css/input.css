@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* font-faces */
+/* Perfectly Nineties */
+@font-face {
+  font-family: 'Perfectly Nineties';
+  src: url('../fonts/woff2/PerfectlyNineties-RegularItalic.woff2') format('woff2'),
+       url('../fonts/woff/PerfectlyNineties-RegularItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+.font-nineties {
+  font-family: 'Perfectly Nineties', sans-serif;
+}
+
+/* SF Pro Regular */
+@font-face {
+  font-family: 'SF Pro Regular';
+  src: url('../fonts/woff2/SF-Pro-Display-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+.font-sfpro-regular {
+  font-family: 'SF Pro Regular', sans-serif;
+}
+
+/* SF Pro Bold */
+@font-face {
+  font-family: 'SF Pro Bold';
+  src: url('../fonts/woff2/SF-Pro-Display-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+.font-sfpro-bold {
+  font-family: 'SF Pro Bold', sans-serif;
+}
+
+.font-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.links li {
+  transition: all 0.1s ease-in-out;
+  line-height: 1rem;
+  padding: 0.25rem;
+  list-style-type: none;
+}
+
+li.active, .dropdown-menu ul li.active {
+  @apply rounded-2xl lg:rounded-lg border backdrop-blur-2xl bg-white/10 border-white/20 lg:scale-110;
+}
+
+.toggle-btn.opened span:nth-child(1) {
+  transform: rotate(42deg);
+}
+
+.toggle-btn.opened span:nth-child(2) {
+  transform: scale(0);
+}
+
+.toggle-btn.opened span:nth-child(3) {
+  transform: rotate(-42deg);
+}
+
+.scrolled .dropdown-menu {
+  @apply top-28 right-10;
+}
+
+.scrolled .hamburger {
+  @apply pr-1;
+}
+
+header.scrolled {
+  @apply pt-6 lg:pt-8;
+}
+
+body.wigglywobble {
+  filter: url(#displacementFilter);
+}
+
+.scrolled .navbar {
+  @apply mx-auto rounded-full bg-white/10 backdrop-blur-xl border border-white/20 scale-[92.5%] px-5 md:px-6 py-5;
+}

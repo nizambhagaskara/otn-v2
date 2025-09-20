@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth font-sfpro-regular">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology for New Era</title>
+
+    <!-- Standard favicon -->
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png" />
+
+    <!-- Apple Touch Icon for iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    
+    <!-- Android icon -->
+    <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png" />
+
+    <!-- Favicon for older browsers -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- Flaticons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/output.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+
+    <!-- Open Sauce Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-black">
+    <!-- Header -->
+    <header id="mainHeader" class="fixed pt-5 left-0 w-full z-50 transition-all duration-300 ease-in-out">
+      <div class="navbar relative w-full px-7 py-4 flex items-center transition-all duration-300 ease-in-out origin-top">
+        <div class="logo flex items-end gap-x-2 sm:gap-x-3 mr-auto">
+          <a href="https://smpn18kotatangsel.sch.ac.id">
+            <img src="img/dellas.png" alt="SMPN 18 Kota Tangerang Selatan" class="w-8 sm:w-10 md:w-12">
+          </a>
+          <div class="w-[2px] h-8 md:h-9 bg-white"></div>
+          <a href="https://www.otn.or.id/">
+            <img src="img/otn.png" alt="Olimpiade TIK-Informatika Nasional Ke-7" class="w-8 sm:w-10 md:w-12">
+          </a>
+          <span class="font-medium text-white text-sm sm:text-base lg:text-lg">OTN</span>
+          <span class="text-white text-2xl md:text-3xl">7th</span>
+        </div>
+
+        <ul class="links hidden lg:flex gap-3 xl:gap-8 text-white mx-auto">
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#home" class="inline-block px-3 py-1">Home</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#newera" class="inline-block px-3 py-1">The New Era</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#innovations" class="inline-block px-3 py-1">Innovations</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#thebeyond" class="inline-block px-1 py-1">The Beyond</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#about" class="inline-block px-3 py-1">About</a></li>
+        </ul>
+
+        <div class="other-btns flex items-center ml-auto">
+          <span class="text-white px-1 hidden lg:flex">made by</span>
+          <div class="p-2 hidden lg:flex">
+            <a href="#"
+              class="action-btn inline-block transition-all duration-200 ease-in-out hover:text-4xl hover:no-underline text-white font-bold hover:bg-white hover:text-black underline decoration-solid decoration-1">
+              Nizam.
+            </a>
+          </div>
+
+          <div class="lg:hidden text-white hamburger transition-all duration-300 ease-in-out pr-2">
+            <button class="toggle-btn flex flex-col justify-center items-center gap-2 cursor-pointer">
+              <span class="transition-all duration-100 ease-in-out w-8 h-[2px] bg-white rounded-lg origin-top-left"></span>
+              <span class="transition-all duration-100 ease-in-out w-8 h-[2px] bg-white rounded-lg"></span>
+              <span class="transition-all duration-100 ease-in-out w-8 h-[2px] bg-white rounded-lg origin-bottom-left"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown-menu hidden opacity-0 absolute right-10 top-24 w-64 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 transition-all duration-300 ease-in-out lg:hidden overflow-x-hidden overflow-y-auto max-h-[60vh]">
+        <ul class="flex flex-col p-3 gap-y-3">
+          <li class="!p-2 flex items-center justify-start text-white w-auto nav-links rounded-2xl hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-200">
+            <a href="#home" class="block w-full h-full">Home</a>
+          </li>
+          <li class="!p-2 flex items-center justify-start text-white w-auto nav-links rounded-2xl hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-200">
+            <a href="#newera" class="block w-full h-full">The New Era</a>
+          </li>
+          <li class="!p-2 flex items-center justify-start text-white w-auto nav-links rounded-2xl hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-200">
+            <a href="#innovations" class="block w-full h-full">Innovations</a>
+          </li>
+          <li class="!p-2 flex items-center justify-start text-white w-auto nav-links rounded-2xl hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-200">
+            <a href="#thebeyond" class="block w-full h-full">The Beyond</a>
+          </li>
+          <li class="!p-2 flex items-center justify-start text-white w-auto nav-links rounded-2xl hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-200">
+            <a href="#about" class="block w-full h-full">About</a>
+          </li>
+          <li class="wobblemobile !px-2 !pb-2 hidden items-center justify-start text-yellow-300 w-auto">Click the hamburger 50x and enter "wigglywobble"!</li>
+          <li class="!px-2 !pt-2 !mt-5 flex items-center justify-start text-white">
+            <span class="text-white px-1 flex">made by</span>
+            <div class="p-2 inline-flex items-center justify-center">
+              <a href="#"
+                class="action-btn inline-block transition-all duration-200 ease-in-out leading-7 hover:text-4xl text-white font-bold hover:!bg-white hover:!text-black underline decoration-solid decoration-1 hover:!no-underline">
+                Nizam.
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="relative h-screen bg-[url('../img/cityscape.jpg')] bg-cover bg-center">
+      <!-- Darken background image -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Gradient fade -->
+      <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-slate-500 dark:to-gray-950"></div>
+
+      <!-- Text wrapper -->
+      <div class="container relative z-10 flex flex-col justify-start top-24 lg:top-0 lg:justify-end items-start text-white h-full px-5 md:px-10 py-8">
+        <span class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl flex flex-col">
+          <span class="font-sfpro-bold">Innovations beyond</span>
+          <span class="italic mb-6 font-nineties">today.</span>
+          <p class="text-base font-opensans font-normal italic">Technology for the new era. Exploring innovations that shape our future—from AI to space, from biotech to green energy.</p>
+        </span>
+      </div>
+    </section>
+
+    <!-- New Era Section -->
+    <section id="newera" class="bg-slate-500 dark:bg-gray-950 text-white py-20 px-5 md:px-10"> 
+      <div class="w-full max-w-7xl"> 
+        <div class="w-full"> 
+          <div class="max-w-xl mb-16"> 
+            <h4 class="text-base text-gray-500">here we are in</h4> 
+            <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl mb-4">The New Era.</h2> 
+          </div> 
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-14 max-w-6xl mx-auto justify-items-center">
+      <!-- Card 1 -->
+      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <img src="img/nanobanana.png" alt="Google's Nano Banana" class="w-full" />
+        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+          <div>
+            <h3 class="block mb-3 font-sfpro-bold text-2xl">Google's Nano <span class="text-yellow-300">Banana</span></h3>
+            <p class="font-medium text-base mb-10">
+              Nano Banana is Google’s AI image generation model, creating and editing high-quality, realistic images from text prompts with consistent details.
+            </p>
+          </div>
+          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <img src="img/biotechstuff.jpg" alt="Biotechnology" class="w-full" />
+        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+          <div>
+            <h3 class="block mb-3 font-sfpro-bold text-2xl">Biotechnology</h3>
+            <p class="font-medium text-base mb-10">
+              Biotechnology is a multidisciplinary field that integrates biological systems and organisms to develop or make useful products and services.
+            </p>
+          </div>
+          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <img src="img/quantumcomputeriNEdciuwqeasfdneb.jpeg" alt="Quantum Computing" class="w-full" />
+        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+          <div>
+            <h3 class="block mb-3 font-sfpro-bold text-2xl">Quantum Computing</h3>
+            <p class="font-medium text-base mb-10">
+              Quantum computing is a computer hardware technology that uses quantum mechanical phenomena to perform computations beyond classical capabilities.
+            </p>
+          </div>
+          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <img src="img/windmill.jpg" alt="Green Energy" class="w-full" />
+        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+          <div>
+            <h3 class="block mb-3 font-sfpro-bold text-2xl"><span class="text-green-600">Greeeeen</span> Energy</h3>
+            <p class="font-medium text-base mb-10">
+              Green energy is energy made from renewable natural resources that are replenished on a human timescale, like solar and wind.
+            </p>
+          </div>
+          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <img src="img/ev.jpg" alt="Google's Nano Banana" class="w-full" />
+        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+          <div>
+            <h3 class="block mb-3 font-sfpro-bold text-2xl">Electric Vehicles</h3>
+            <p class="font-medium text-base mb-10">
+              Electric vehicles are motor vehicles whose propulsion is powered fully or mostly by electricity, reducing reliance on fossil fuels.
+            </p>
+          </div>
+          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+        <img src="img/xbox-ally.jpg" alt="Google's Nano Banana" class="w-full" />
+        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+          <div>
+            <h3 class="block mb-3 font-sfpro-bold text-2xl">Handheld Consoles</h3>
+            <p class="font-medium text-base mb-10">
+              Handheld game consoles are small, portable self-contained video game consoles with a built-in screen, game controls, and speakers.
+            </p>
+          </div>
+          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- random svg hohohohowSDVBqewiruvdb3qierfv -->
+      <svg width="0" height="0" style="position:absolute;">
+        <filter id="displacementFilter">
+          <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turbulence">
+            <animate attributeName="baseFrequency" dur="5s" values="0.01;0.02;0.01" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </svg>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
