@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth font-sfpro-regular">
+<html lang="en" class="dark scroll-smooth font-sfpro-regular scroll-pt-28">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +42,7 @@
           <a href="https://smpn18kotatangsel.sch.ac.id">
             <img src="img/dellas.png" alt="SMPN 18 Kota Tangerang Selatan" class="w-8 sm:w-10 md:w-12">
           </a>
-          <div class="w-[2px] h-8 md:h-9 bg-white"></div>
+          <div class="w-[2px] h-10 bg-white my-auto"></div>
           <a href="https://www.otn.or.id/">
             <img src="img/otn.png" alt="Olimpiade TIK-Informatika Nasional Ke-7" class="w-8 sm:w-10 md:w-12">
           </a>
@@ -51,21 +51,25 @@
         </div>
 
         <ul class="links hidden lg:flex gap-3 xl:gap-8 text-white mx-auto">
-          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#home" class="inline-block px-3 py-1">Home</a></li>
-          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#newera" class="inline-block px-3 py-1">The New Era</a></li>
-          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#innovations" class="inline-block px-3 py-1">Innovations</a></li>
-          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#thebeyond" class="inline-block px-1 py-1">The Beyond</a></li>
-          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#about" class="inline-block px-3 py-1">About</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#home" class="text-base inline-block px-3 py-1">Home</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#newera" class="text-base inline-block px-3 py-1">The New Era</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#innovations" class="text-base inline-block px-3 py-1">Innovations</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#thebeyond" class="text-base inline-block px-1 py-1">The Beyond</a></li>
+          <li class="nav-links rounded-lg hover:border hover:backdrop-blur-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300"><a href="#about" class="text-base inline-block px-3 py-1">About</a></li>
         </ul>
 
-        <div class="other-btns flex items-center ml-auto">
-          <span class="text-white px-1 hidden lg:flex">made by</span>
-          <div class="p-2 hidden lg:flex">
+        <div class="other-btns flex items-end ml-auto min-h-[2.5rem] py-1.5">
+          <!-- Static text -->
+          <span class="text-white hidden lg:flex">made by</span>
+
+          <!-- Link that grows on hover -->
+          <div class="px-2 hidden lg:flex">
             <a href="#"
-              class="action-btn inline-block transition-all duration-200 ease-in-out hover:text-4xl hover:no-underline text-white font-bold hover:bg-white hover:text-black underline decoration-solid decoration-1">
+              class="inline-block text-base leading-none font-bold text-white underline decoration-solid decoration-1 transition-all duration-200 ease-in-out hover:text-4xl hover:no-underline hover:bg-white hover:text-black py-1">
               Nizam.
             </a>
           </div>
+        </div>
 
           <div class="lg:hidden text-white hamburger transition-all duration-300 ease-in-out pr-2">
             <button class="toggle-btn flex flex-col justify-center items-center gap-2 cursor-pointer">
@@ -127,124 +131,123 @@
     </section>
 
     <!-- New Era Section -->
-    <section id="newera" class="bg-slate-500 dark:bg-gray-950 text-white py-20 px-5 md:px-10"> 
+    <section id="newera" class="bg-slate-500 dark:bg-gray-950 text-white py-7 px-5 md:px-10"> 
       <div class="w-full max-w-7xl"> 
         <div class="w-full"> 
-          <div class="max-w-xl mb-16"> 
-            <h4 class="text-base text-gray-500">here we are in</h4> 
-            <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl mb-4">The New Era.</h2> 
+          <div class="max-w-xl mb-10"> 
+            <h4 class="text-lg text-gray-500">here we are in</h4> 
+            <h2 class="font-bold font-sfpro-bold text-white text-3xl sm:text-2xl mb-4">The New Era.</h2> 
           </div> 
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-14 max-w-6xl mx-auto justify-items-center">
-      <!-- Card 1 -->
-      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-        <img src="img/nanobanana.png" alt="Google's Nano Banana" class="w-full" />
-        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
-          <div>
-            <h3 class="block mb-3 font-sfpro-bold text-2xl">Google's Nano <span class="text-yellow-300">Banana</span></h3>
-            <p class="font-medium text-base mb-10">
-              Nano Banana is Google’s AI image generation model, creating and editing high-quality, realistic images from text prompts with consistent details.
-            </p>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-16 mx-auto">
+        <!-- Card 1 -->
+        <div class="flex-1 min-w-[260px] max-w-[380px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+          <img src="img/nanobanana.png" alt="Google's Nano Banana" class="w-full" />
+          <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+            <div>
+              <h3 class="block mb-3 font-sfpro-bold text-2xl">Google's Nano <span class="text-yellow-300">Banana</span></h3>
+              <p class="font-medium text-base mb-10">
+                Nano Banana is Google’s AI image generation model, creating and editing high-quality, realistic images from text prompts with consistent details.
+              </p>
+            </div>
+            <a href="https://gemini.google/overview/image-generation/" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start" target="_blank">
+              Learn More
+            </a>
           </div>
-          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
-            Learn More
-          </a>
         </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-        <img src="img/biotechstuff.jpg" alt="Biotechnology" class="w-full" />
-        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
-          <div>
-            <h3 class="block mb-3 font-sfpro-bold text-2xl">Biotechnology</h3>
-            <p class="font-medium text-base mb-10">
-              Biotechnology is a multidisciplinary field that integrates biological systems and organisms to develop or make useful products and services.
-            </p>
+        <!-- Card 2 -->
+        <div class="flex-1 min-w-[260px] sm:min-w-[220px] md:min-w-[240px] max-w-[380px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+          <img src="img/windmill.jpg" alt="Green Energy" class="w-full" />
+          <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+            <div>
+              <h3 class="block mb-3 font-sfpro-bold text-2xl"><span class="text-green-600">Greeeeen</span> Energy</h3>
+              <p class="font-medium text-base mb-10">
+                Green energy is energy made from renewable natural resources that are replenished on a human timescale, like solar and wind.
+              </p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Renewable_energy" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start" target="_blank">
+              Learn More
+            </a>
           </div>
-          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
-            Learn More
-          </a>
         </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-        <img src="img/quantumcomputeriNEdciuwqeasfdneb.jpeg" alt="Quantum Computing" class="w-full" />
-        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
-          <div>
-            <h3 class="block mb-3 font-sfpro-bold text-2xl">Quantum Computing</h3>
-            <p class="font-medium text-base mb-10">
-              Quantum computing is a computer hardware technology that uses quantum mechanical phenomena to perform computations beyond classical capabilities.
-            </p>
+        <!-- Card 3 -->
+        <div class="flex-1 min-w-[260px] sm:min-w-[220px] md:min-w-[240px] max-w-[380px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+          <img src="img/ev.jpg" alt="Electric Vehicles" class="w-full" />
+          <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+            <div>
+              <h3 class="block mb-3 font-sfpro-bold text-2xl"><span class="text-teal-400 text-shadow-lg text-shadow-teal-400/20">Electic</span> Vehicles</h3>
+              <p class="font-medium text-base mb-10">
+                Electric vehicles are motor vehicles whose propulsion is powered fully or mostly by electricity, reducing reliance on fossil fuels.
+              </p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Electric_vehicle" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start" target="_blank">
+              Learn More
+            </a>
           </div>
-          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
-            Learn More
-          </a>
         </div>
-      </div>
 
-      <!-- Card 4 -->
-      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-        <img src="img/windmill.jpg" alt="Green Energy" class="w-full" />
-        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
-          <div>
-            <h3 class="block mb-3 font-sfpro-bold text-2xl"><span class="text-green-600">Greeeeen</span> Energy</h3>
-            <p class="font-medium text-base mb-10">
-              Green energy is energy made from renewable natural resources that are replenished on a human timescale, like solar and wind.
-            </p>
+        <!-- Card 4 -->
+        <div class="flex-1 min-w-[260px] sm:min-w-[220px] md:min-w-[240px] max-w-[380px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+          <img src="img/xbox-ally.jpg" alt="Handheld Gaming PC" class="w-full" />
+          <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
+            <div>
+              <h3 class="block mb-3 font-sfpro-bold text-2xl">H<span class="inline-block text-green-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-xbox" viewBox="0 0 16 16"><path d="M7.202 15.967a8 8 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33m-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.4 8.4 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.5 9.5 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4 4 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.8 7.8 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12 12 0 0 1-.654-.319Z"/></svg></span>ndheld Gaming PC</h3>
+              <p class="font-medium text-base mb-10">
+                A handheld gaming PC is a portable computer designed for gaming, combining powerful hardware, built-in controls, and screen for console-like play anywhere.
+              </p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Gaming_computer#Handheld" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start" target="_blank">
+              Learn More
+            </a>
           </div>
-          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
-            Learn More
-          </a>
         </div>
       </div>
-
-      <!-- Card 5 -->
-      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-        <img src="img/ev.jpg" alt="Google's Nano Banana" class="w-full" />
-        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
-          <div>
-            <h3 class="block mb-3 font-sfpro-bold text-2xl">Electric Vehicles</h3>
-            <p class="font-medium text-base mb-10">
-              Electric vehicles are motor vehicles whose propulsion is powered fully or mostly by electricity, reducing reliance on fossil fuels.
-            </p>
-          </div>
-          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
-            Learn More
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-        <img src="img/xbox-ally.jpg" alt="Google's Nano Banana" class="w-full" />
-        <div class="flex flex-col justify-between py-5 px-6 text-white flex-1">
-          <div>
-            <h3 class="block mb-3 font-sfpro-bold text-2xl">Handheld Consoles</h3>
-            <p class="font-medium text-base mb-10">
-              Handheld game consoles are small, portable self-contained video game consoles with a built-in screen, game controls, and speakers.
-            </p>
-          </div>
-          <a href="#" class="inline-block font-medium rounded-xl border border-white/20 px-4 py-2 hover:scale-110 transition-transform duration-200 ease-in-out w-auto self-start">
-            Learn More
-          </a>
-        </div>
-      </div>
-    </div>
     </section>
 
-    <!-- random svg hohohohowSDVBqewiruvdb3qierfv -->
-      <svg width="0" height="0" style="position:absolute;">
-        <filter id="displacementFilter">
-          <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turbulence">
-            <animate attributeName="baseFrequency" dur="5s" values="0.01;0.02;0.01" repeatCount="indefinite"/>
-          </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R" yChannelSelector="G"/>
-        </filter>
-      </svg>
+    <!-- Innovations Section -->
+    <section id="innovations" class="bg-slate-500 dark:bg-gray-950 text-white py-20 px-5 md:px-10">
+       <div class="w-full max-w-7xl"> 
+        <div class="w-full"> 
+          <div class="max-w-xl mb-10">
+            <h4 class="text-lg text-gray-500">in a world full of</h4> 
+            <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl mb-4">Innovations.</h2> 
+          </div> 
+        </div>
+      </div>
+
+      <div class="container flex flex-col justify-center">
+        <div class="flex justify-between items-center w-full">
+          <div class="flex justify-center items-center ml-auto shadow-xl">
+            <div class="card hover:scale-105 relative w-[300px] h-[400px] bg-white rounded-r-2xl cursor-pointer shadow-[10px_0_20px_rgba(0,_0,_0,_0.4)] transform-[perspective(2000px)] rotate-z-0 transform-gpu transform-3d transition-all duration-200 ease-in-out z-[1]">
+              <div class="cover absolute top-0 left-0 w-full h-full rounded-r-2xl bg-transparent origin-left transform-3d transition-transform duration-500 ease-in-out backface-hidden will-change-transform">
+                <img src="img/cover.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover backface-hidden rounded-r-2xl">
+                <img src="img/back.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover backface-hidden rounded-l-2xl rotate-y-180">
+              </div>
+              <div class="content w-full h-full p-4 flex flex-col justify-center items-center text-[var(--text-dark)] text-base">
+                <h2 class="mb-4 text-xl font-bold font-sfpro-bold">AI That Acts On Its Own</h2>
+                <p class="text-justify">Autonomous AI agents are like digital helpers that don’t need you to micromanage every step. You tell them a goal, then they break it down, make decisions, adjust when things change, and carry out the work. They’re great for automating repetitive tasks, helping you get things done faster—and yes, sometimes they mess up, but they’re learning all the time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 z-[9998] opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out will-change-[opacity]"></div>
+
+    <!-- absolutely random svg out of nowhere -->
+    <svg width="0" height="0" style="position:absolute;">
+      <filter id="displacementFilter">
+        <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turbulence">
+          <animate attributeName="baseFrequency" dur="5s" values="0.01;0.02;0.01" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="80" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>

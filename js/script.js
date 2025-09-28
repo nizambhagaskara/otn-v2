@@ -67,8 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // lower threshold so mobile sections are easier to detect
-  const observerOptions = { threshold: 0.6 };
+  function getObserverOptions() {
+  if (window.innerWidth <= 768) {
+    // Mobile & tablets
+    return { threshold: 0.2 };
+  } else {
+    // Desktop
+    return { threshold: 0.6 };
+  }
+}
+
+let observerOptions = getObserverOptions();
 
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver((entries) => {
@@ -96,14 +105,18 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveLink(initialHash);
   handleHomeLink();
 
-  // Update active link on scroll for the "top" special case
-  window.addEventListener('scroll', handleHomeLink);
-
   // header scrolled class (you already had this)
   const header = document.getElementById("mainHeader");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
+
+    handleHomeLink();
+
+    // close dropdown on scroll
+    if (!dropdownMenu.classList.contains('hidden')) {
+      closeDropdown();
+    }
   });
 
   // wobbler on pc
@@ -115,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   console.log("Ctrl + Shift + K -> wigglywobble");
+  console.log("do it :)");
 
   const wobblemobile = document.querySelector('.wobblemobile');
   const wobbleRng = Math.floor(Math.random() * (67 + 1)); // SIX SEVENNNNNNNNNNN
@@ -122,4 +136,38 @@ document.addEventListener('DOMContentLoaded', () => {
     wobblemobile.classList.remove("hidden");
     wobblemobile.classList.add("flex");
   }
+
+  const cards = document.querySelectorAll('.card');
+  const overlay = document.getElementById('overlay');
+
+  cards.forEach(card => {
+    const cover = card.querySelector('.cover');
+
+    card.addEventListener('click', () => {
+      const isFullscreen = card.classList.contains('fullscreen');
+
+      // Reset all cards
+      cards.forEach(c => {
+        c.classList.remove('fullscreen');
+        c.querySelector('.cover').classList.remove('card-flipped');
+      });
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+
+      if (!isFullscreen) {
+        // Open this card
+        card.classList.add('fullscreen');
+        cover.classList.add('card-flipped');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+      }
+    });
+  });
+
+  // Close when clicking overlay
+  overlay.addEventListener('click', () => {
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    cards.forEach(c => {
+      c.classList.remove('fullscreen');
+      c.querySelector('.cover').classList.remove('card-flipped');
+    });
+  });
 });
