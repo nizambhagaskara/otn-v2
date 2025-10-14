@@ -67,18 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function getObserverOptions() {
-  if (window.innerWidth <= 768) {
-    // Mobile & tablets
-    return { threshold: 0.2 };
-  } else {
-    // Desktop
-    return { threshold: 0.6 };
-  }
-}
-
-let observerOptions = getObserverOptions();
-
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -88,7 +76,7 @@ let observerOptions = getObserverOptions();
         setActiveLink(id);
       }
     });
-  }, observerOptions);
+  }, {threshold: 0.2});
 
   sections.forEach(section => observer.observe(section));
 
@@ -168,6 +156,26 @@ let observerOptions = getObserverOptions();
     cards.forEach(c => {
       c.classList.remove('fullscreen');
       c.querySelector('.cover').classList.remove('card-flipped');
+    });
+  });
+
+  document.querySelectorAll('.delay').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Add inward bounce
+      el.classList.add('bounce-inward');
+
+      // Remove the class after animation ends
+      setTimeout(() => {
+        el.classList.remove('bounce-inward');
+      }, 300);
+
+      // Redirect after a short delay
+      const url = el.href;
+      setTimeout(() => {
+        window.open(url, el.target || '_self');
+      }, 500); // 0.5s delay before redirect
     });
   });
 });
