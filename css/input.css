@@ -15,10 +15,10 @@
 /* Perfectly Nineties */
 @font-face {
   font-family: 'Perfectly Nineties';
-  src: url('../fonts/woff2/PerfectlyNineties-RegularItalic.woff2') format('woff2'),
-       url('../fonts/woff/PerfectlyNineties-RegularItalic.woff') format('woff');
+  src: url('../fonts/PerfectlyNineties-RegularItalic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 .font-nineties {
   font-family: 'Perfectly Nineties', sans-serif;
@@ -27,31 +27,22 @@
 /* SF Pro Regular */
 @font-face {
   font-family: 'SF Pro Regular';
-  src: url('../fonts/woff2/SF-Pro-Display-Regular.woff2') format('woff2');
+  src: url('../fonts/SF-Pro-Display-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 .font-sfpro-regular {
   font-family: 'SF Pro Regular', sans-serif;
 }
 
-/* SF Pro Bold */
-@font-face {
-  font-family: 'SF Pro Bold';
-  src: url('../fonts/woff2/SF-Pro-Display-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-.font-sfpro-bold {
-  font-family: 'SF Pro Bold', sans-serif;
-}
-
 /* Open Sauce Regular */
 @font-face {
   font-family: 'Open Sauce Regular';
-  src: url('../fonts/woff2/OpenSauceSans-Regular.woff2') format('woff2');
+  src: url('../fonts/OpenSauceSans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 .font-opensauce-regular {
   font-family: 'Open Sauce Regular', sans-serif;
@@ -101,7 +92,13 @@ body.wigglywobble {
 }
 
 .scrolled .navbar {
-  @apply mx-auto rounded-full bg-white/10 backdrop-blur-xl border border-white/20 scale-[92.5%] px-5 md:px-6 py-5;
+  @apply mx-auto
+  rounded-full 
+  bg-white/10 
+  backdrop-blur-xl 
+  border 
+  border-white/20 
+  scale-[92.5%] px-3 py-3 md:px-4 md:py-4;
 }
 
 .card {
@@ -219,4 +216,25 @@ body.wigglywobble {
 
 .bounce-inward {
   animation: bounce-inward 0.3s ease;
+}
+
+/* Vertical scroll */
+.scroll-up { transform: translateY(60px); }
+.fade-in { transform: translateY(60px); }
+
+/* Horizontal scroll */
+.scroll-left { transform: translateX(-60px); }
+.scroll-right { transform: translateX(60px); }
+.fade-horizontal { transform: translateX(60px); }
+
+/* Common hidden state */
+.scroll-up, .fade-in, .scroll-left, .scroll-right, .fade-horizontal {
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Visible state */
+.show {
+  opacity: 1;
+  transform: translate(0, 0);
 }

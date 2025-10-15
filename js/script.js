@@ -178,4 +178,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500); // 0.5s delay before redirect
     });
   });
+
+  // Message form handling
+  const msgForm = document.getElementById('MsgForm');
+
+  msgForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const msgName = document.getElementById('MsgName').value.trim();
+    const msgText = document.getElementById('MsgText').value.trim();
+
+    const readyToSend = encodeURI(`Hi, my name is ${msgName}. \n\n${msgText}`);
+    const waLink = `https://wa.me/6287785752761?text=${readyToSend}`;
+    window.open(waLink, '_blank');
+  });
+  
+  // Select all scroll-animation elements
+  const scrollElements = document.querySelectorAll(
+    '.scroll-up, .scroll-left, .scroll-right, .fade-in, .fade-horizontal'
+  );
+
+  // IntersectionObserver to trigger animation when element is in viewport
+  const animObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry, index) => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+
+        // Optional: add tiny stagger for multiple elements entering at once
+        el.style.transitionDelay = `${index * 80}ms`;
+
+        el.classList.add('show');   // add class to animate
+        obs.unobserve(el);          // stop observing once animated
+      });
+    },
+    { threshold: 0.15 }  // trigger when 15% of element is visible
+  );
+
+  // Observe all scroll elements
+  scrollElements.forEach(el => animObserver.observe(el));
+
 });
