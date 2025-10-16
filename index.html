@@ -1,28 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth font-sfpro-regular scroll-pt-28">
+<html lang="en" class="dark scroll-smooth scroll-pt-28">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technology for New Era</title>
 
-    <!-- Standard favicon -->
     <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png" />
-
-    <!-- Apple Touch Icon for iOS -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-    
-    <!-- Android icon -->
     <link rel="icon" sizes="192x192" href="img/android-chrome-192x192.png" />
-
-    <!-- Favicon for older browsers -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/output.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="../img/cityscape.webp" as="image" type="image/webp" fetchpriority="high">
+    
+    <link rel="preload" href="fonts/subset-SFProDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/subset-SFProDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <style>
+        @font-face {
+            font-family: 'SF Pro Display';
+            src: url('fonts/subset-SFProDisplay-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SF Pro Regular';
+            src: url('fonts/subset-SFProDisplay-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .font-sfpro-bold {
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .font-sfpro-regular {
+            font-family: sans-serif;
+            font-weight: normal;
+        }
+    </style>
+    
+    <link rel="preload" href="css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/output.css"></noscript>
 
-    <!-- Open Sauce Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
@@ -31,27 +55,10 @@
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </noscript>
 
-    <link rel="preload" href="fonts/subset-SFProDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/PerfectlyNineties-RegularItalic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/OpenSauceSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="preload" href="img/cityscape.webp" as="image" type="image/webp">
-
-    <style>
-      @font-face {
-        font-family: 'SF Pro Display';
-        src: url('fonts/subset-SFProDisplay-Bold.woff2') format('woff2');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-      }
-      .font-sfpro-bold {
-        font-family: 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      }
-    </style>
   </head>
-  <body class="bg-gray-950 !overflow-x-hidden">
+  <body class="bg-gray-950 !overflow-x-hidden font-sfpro-regular">
     <!-- Header -->
     <header id="mainHeader" class="fixed pt-5 left-0 w-full z-50 transition-all duration-300 ease-in-out">
       <div class="navbar relative w-full px-8 py-4 flex items-center transition-all duration-300 ease-in-out origin-top">
@@ -125,28 +132,27 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="relative h-screen bg-[url('../img/cityscape.webp')] bg-cover bg-center flex flex-col justify-end px-5 md:px-10 py-8 text-white">
-       <div class="absolute inset-0 bg-black/60"></div>
+    <section id="home" class="relative h-screen flex flex-col justify-end px-5 md:px-10 py-8 text-white overflow-hidden">
+      <img src="../img/cityscape.webp" class="absolute inset-0 w-full h-full object-cover z-0 brightness-[43%]" alt="Cityscape" loading="eager" decoding="async" fetchpriority="high" />
 
       <!-- Text wrapper -->
-      <span class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl flex flex-col mt-24 md:mt-0 z-10">
-        <span class="font-sfpro-bold">
-          Innovations beyond
+      <div class="relative z-20 mt-24 md:mt-0 text-white">
+        <span class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl flex flex-col">
+          <span class="font-sfpro-bold">Innovations beyond</span>
+          <span class="italic mb-6 font-nineties">today.</span>
         </span>
-        <span class="italic mb-6 font-nineties">today.</span>
-        <p class="text-base font-opensans font-normal italic">
+        <p class="text-base font-opensans font-normal italic mt-4">
           Technology for the new era. Exploring innovations that shape our future, from AI to upgradeable laptops, handheld PCs and even electric vehicles.
         </p>
-      </span>
+      </div>
     </section>
-
 
     <!-- New Era Section -->
     <section id="newera" class="bg-slate-500 dark:bg-gray-950 text-white py-7 px-5 md:px-10"> 
       <div class="w-full max-w-7xl"> 
         <div class="w-full"> 
           <div class="max-w-xl mb-10"> 
-            <h4 class="text-lg text-gray-500">here we are in</h4> 
+            <h4 class="text-[17px] text-gray-500">here we are in</h4> 
             <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl mb-4">The New Era.</h2> 
           </div> 
         </div>
@@ -222,7 +228,7 @@
     <!-- Innovations Section -->
     <section id="innovations" class="bg-slate-500 dark:bg-gray-950 text-white py-7 px-5 md:px-10 overflow-x-hidden">
       <div class="w-full mb-10"> 
-        <h4 class="text-lg text-gray-500">in a world full of</h4> 
+        <h4 class="text-[17px] text-gray-500">in a world full of</h4> 
         <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl mb-10">Innovations.</h2> 
 
         <div class="flex flex-wrap sm:grid sm:grid-cols-2 md:flex md:flex-col justify-around gap-x-8 gap-y-6 md:gap-y-7 min-w-full self-center" data-animate="scroll" data-sequence="true" data-delay="500">
@@ -237,7 +243,7 @@
               <div class="flex flex-col h-full justify-between md:hidden absolute bottom-0 left-0 w-full p-4 z-10">
                 <a class="self-end px-2 py-1 cursor-pointer bg-[#fb4a01] text-white rounded-xl border border-white/40" href="https://frame.work" target="_blank">Check it out! <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16" class="inline"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></a>
                 <div>
-                  <h3 class="text-xl sm:text-lg font-sfpro-bold text-white drop-shadow-md">(actually!) Customizable Laptop</h3>
+                  <h3 class="text-xl sm:text-[17px] font-sfpro-bold text-white drop-shadow-md">(actually!) Customizable Laptop</h3>
                   <p class="text-base text-gray-300">Framework Computer, Inc.</p>
                 </div>
               </div>
@@ -246,7 +252,7 @@
             <!-- Text box -->
             <div class="hidden md:flex flex-1 flex-col justify-start p-6 bg-transparent rounded-2xl shadow-lg">
               <h3 class="text-xl sm:text-3xl lg:text-4xl font-sfpro-bold text-white drop-shadow-md">(actually!) Customizable Laptop</h3>
-              <p class="text-lg lg:text-xl text-gray-300 my-4">Framework Computer, Inc.</p>
+              <p class="text-[17px] lg:text-xl text-gray-300 my-4">Framework Computer, Inc.</p>
               <div>
                 <a class="px-4 py-2 bg-transparent hover:bg-[#fb4a01] hover:text-white border border-white/20 rounded-lg transition-all duration-300 ease-in-out cursor-pointer" href="https://frame.work" target="_blank">
                   Check it out!
@@ -269,7 +275,7 @@
               <div class="flex flex-col h-full justify-between md:hidden absolute bottom-0 left-0 w-full z-10">
                 <a class="self-start px-2 py-1 m-4 cursor-pointer bg-[#32e975] text-black rounded-xl border border-white/40" href="https://news.xbox.com/en-us/2025/09/09/xbox-cloud-gaming-vehicles-cars-lg/" target="_blank">Check it out! <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16" class="inline"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></a>
                 <div class="p-4">
-                  <h3 class="text-xl sm:text-lg font-sfpro-bold text-white drop-shadow-md">Xbox Cloud Gaming <span class="text-base">(in a car???)</span></h3>
+                  <h3 class="text-xl sm:text-[17px] font-sfpro-bold text-white drop-shadow-md">Xbox Cloud Gaming <span class="text-base">(in a car???)</span></h3>
                   <p class="text-base text-gray-300">Xbox | LG</p>
                 </div>
               </div>
@@ -280,7 +286,7 @@
               <h3 class="text-xl sm:text-3xl lg:text-4xl font-sfpro-bold text-white drop-shadow-md">
                 Xbox Cloud Gaming <span class="text-base">(in a car???)</span>
               </h3>
-              <p class="text-lg text-gray-300 mt-3 mb-4">Xbox | LG</p>
+              <p class="text-[17px] text-gray-300 mt-3 mb-4">Xbox | LG</p>
               <div>
                 <a class="px-4 py-2 bg-transparent hover:bg-[#32e975] hover:text-black border border-white/20 rounded-lg transition-all duration-300 ease-in-out cursor-pointer" href="https://news.xbox.com/en-us/2025/09/09/xbox-cloud-gaming-vehicles-cars-lg/" target="_blank">
                   Check it out!
@@ -304,7 +310,7 @@
               <div class="flex flex-col h-full justify-between md:hidden absolute bottom-0 left-0 w-full p-4 z-10">
                 <a class="self-end px-2 py-1 cursor-pointer bg-black text-white rounded-xl border border-white/40" href="https://www.apple.com/iphone-air/" target="_blank">Check it out! <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16" class="inline"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></a>
                 <div>
-                  <h3 class="text-xl sm:text-lg font-sfpro-bold text-white drop-shadow-md">Thin Phones</h3>
+                  <h3 class="text-xl sm:text-[17px] font-sfpro-bold text-white drop-shadow-md">Thin Phones</h3>
                   <p class="text-base text-gray-300">iPhone Air and Galaxy S25 Edge</p>
                 </div>
               </div>
@@ -313,7 +319,7 @@
             <!-- Text box -->
             <div class="hidden md:flex flex-1 flex-col justify-start p-6">
               <h3 class="text-xl sm:text-3xl lg:text-4xl font-sfpro-bold text-white drop-shadow-md">Thin Phones</h3>
-              <p class="text-lg text-gray-300 my-4">iPhone Air and Galaxy S25 Edge</p>
+              <p class="text-[17px] text-gray-300 my-4">iPhone Air and Galaxy S25 Edge</p>
               <div>
                 <a class="px-4 py-2 bg-transparent hover:bg-[#dedede] hover:text-black border border-white/20 rounded-lg transition-all duration-300 ease-in-out cursor-pointer" href="https://www.apple.com/iphone-air/" target="_blank">
                   Check it out!
@@ -336,7 +342,7 @@
               <div class="flex flex-col h-full justify-between md:hidden absolute bottom-0 left-0 w-full p-4 z-10">
                 <a class="self-start px-2 py-1 cursor-pointer bg-white text-black rounded-xl border border-white/40" href="https://openai.com/index/sora-2/" target="_blank">Check it out! <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16" class="inline"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg></a>
                 <div>
-                  <h3 class="text-xl sm:text-lg font-sfpro-bold text-white drop-shadow-md">Realistic Video AI Generator</h3>
+                  <h3 class="text-xl sm:text-[17px] font-sfpro-bold text-white drop-shadow-md">Realistic Video AI Generator</h3>
                   <p class="text-base text-gray-300">OpenAI Sora 2</p>
                 </div>
               </div>
@@ -347,7 +353,7 @@
               <h3 class="text-xl sm:text-3xl lg:text-4xl font-sfpro-bold text-white drop-shadow-md">
                 Realistic AI Video Generator
               </h3>
-              <p class="text-lg text-gray-300 my-4">OpenAI Sora 2</p>
+              <p class="text-[17px] text-gray-300 my-4">OpenAI Sora 2</p>
               <div>
                 <a class="px-4 py-2 bg-transparent hover:bg-black hover:text-white border border-white/20 rounded-lg transition-all duration-300 ease-in-out cursor-pointer" href="https://openai.com/index/sora-2/" target="_blank">
                   Check it out! 
@@ -366,14 +372,14 @@
     <section id="nextgen" class="relative w-full flex flex-col justify-between text-white bg-gray-950 overflow-hidden">
       <!-- Title -->
       <div class="relative z-20 px-5 md:px-10 mt-10">
-        <h4 class="text-lg text-gray-500">and be ready for</h4>
+        <h4 class="text-[17px] text-gray-500">and be ready for</h4>
         <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl mb-8">The Next-Generation.</h2>
       </div>
 
       <!-- RTX 5090 -->
       <div id="rtx5090" class="relative w-full min-h-[800px]">
         <!-- Desktop Background Image -->
-        <img src="img/rtx5090.webp" alt="Nvidia RTX 5090" class="hidden lg:block absolute inset-0 w-full h-full object-cover object-[60%_center] z-0" loading="lazy" decoding="async">
+        <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"><img src="img/rtx5090.webp" alt="Nvidia RTX 5090" class="hidden lg:block absolute inset-0 w-full h-full object-cover object-[60%_center] z-0" loading="lazy" decoding="async"></a>
 
         <!-- Top & Bottom fades -->
         <div class="hidden lg:block absolute top-0 left-0 w-full h-48 bg-gradient-to-t from-transparent to-gray-950 z-10"></div>
@@ -382,14 +388,14 @@
         <!-- Description text -->
         <div class="relative z-20 px-5 sm:px-10 lg:px-10 max-w-2xl lg:translate-y-96">
           <h2 class="text-2xl lg:text-4xl font-bold font-sfpro-bold mb-4">GeForce RTX 5090</h2>
-          <p class="font-medium text-lg mb-10 text-gray-300">
+          <p class="font-medium text-[17px] mb-10 text-gray-300">
             The NVIDIA GeForce RTX 5090 is the top-tier GPU in the RTX 50 series, built on the Blackwell architecture with 32 GB of GDDR7 memory. It excels at 4K and 8K gaming, 3D rendering, and AI tasks, offering major improvements in ray tracing, AI-based rendering, and efficiency. With support for DLSS 4 and Multi-Frame Generation, it boosts frame rates dramatically, making it the most powerful consumer GPU for gamers, creators, and developers needing extreme performance and ultra-realistic visuals.
           </p>
         </div>
 
         <!-- Mobile Image -->
         <div class="relative block lg:hidden w-full mb-10">
-          <img src="img/rtx5090.webp" alt="Nvidia RTX 5090" class="w-full h-[40vh] sm:h-[50vh] object-cover object-[70%_center] md:h-[60vh]">
+          <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"><img src="img/rtx5090.webp" alt="Nvidia RTX 5090" class="w-full h-[40vh] sm:h-[50vh] object-cover object-[70%_center] md:h-[60vh]"></a>
           <div class="absolute top-0 left-0 w-full h-28 bg-gradient-to-t from-transparent to-gray-950"></div>
           <div class="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-b from-transparent to-gray-950"></div>
         </div>
@@ -398,7 +404,7 @@
       <!-- Unreal Engine 5 -->
       <div id="ue5" class="relative w-full min-h-[800px]">
         <!-- Desktop Background Image -->
-        <img src="img/ue5.webp" alt="Unreal Engine 5 Lumen and Nanite" class="hidden lg:block absolute inset-0 w-full h-full object-cover object-center z-0 -translate-x-60 brightness-150" loading="lazy" decoding="async">
+        <a href="https://www.unrealengine.com/en-US/unreal-engine-5"><img src="img/ue5.webp" alt="Unreal Engine 5 Lumen and Nanite" class="hidden lg:block absolute inset-0 w-full h-full object-cover object-center z-0 -translate-x-60 brightness-150" loading="lazy" decoding="async"></a>
 
         <!-- Horizontal fade (left to right) -->
         <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-transparent to-gray-950 -translate-x-56 z-10"></div>
@@ -410,14 +416,14 @@
         <!-- Description text -->
         <div class="relative z-20 px-5 sm:px-10 lg:px-10 max-w-2xl lg:translate-y-72 lg:ml-auto">
           <h2 class="text-2xl lg:text-4xl font-bold font-sfpro-bold mb-4">Unreal Engine 5</h2>
-          <p class="font-medium text-lg mb-10 text-gray-300">
+          <p class="font-medium text-[17px] mb-10 text-gray-300">
             Unreal Engine 5 introduces Lumen for real-time global illumination and Nanite for ultra-detailed assets, making cinematic-quality environments possible in real-time. Its MetaHuman framework allows realistic haracters with lifelike animations, bridging the gap between movies and games. UE5 sets the new standard for next-generation visuals and performance across all platforms.<br>courtesy image of Epic Games
           </p>
         </div>
 
         <!-- Mobile Image -->
         <div class="relative block lg:hidden w-full mb-10">
-          <img src="img/ue5.webp" alt="Unreal Engine 5 Lumen and Nanite" class="w-full h-auto object-cover object-center min-h-[300px] brightness-150">
+          <a href="https://www.unrealengine.com/en-US/unreal-engine-5"><img src="img/ue5.webp" alt="Unreal Engine 5 Lumen and Nanite" class="w-full h-auto object-cover object-center min-h-[300px] brightness-150"></a>
           <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-t from-transparent to-gray-950"></div>
           <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-gray-950"></div>
         </div>
@@ -427,14 +433,14 @@
     <section id="about" class="pb-7 px-5 md:px-10 bg-slate-500 dark:bg-gray-950 text-white">
       <!-- Header -->
       <div class="mt-10 mb-8">
-        <h4 class="text-lg text-gray-500">just in case you were curious</h4>
+        <h4 class="text-[17px] text-gray-500">just in case you were curious</h4>
         <h2 class="font-bold font-sfpro-bold text-white text-2xl sm:text-3xl">
           About <span class="inline text-base font-normal font-sfpro-regular">me and this project</span>
         </h2>
       </div>
 
       <!-- Info Card -->
-      <div class="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-lg text-gray-200 flex flex-col md:flex-row items-center gap-8">
+      <div class="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-lg text-gray-200 flex flex-col md:flex-row items-start gap-8">
         <!-- Image -->
         <div class="w-full md:w-1/2 rounded-xl overflow-hidden">
           <img src="img/bwackguy.webp" alt="Profile picture of Nizam Bhagaskara Ekamulyo" class="w-full aspect-video object-cover rounded-xl" loading="lazy">
@@ -443,8 +449,10 @@
         <!-- Text -->
         <div class="w-full md:w-1/2">
           <h3 class="text-2xl font-bold mb-3 font-sfpro-bold">Nizam Bhagaskara Ekamulyo</h3>
-          <p class="text-gray-300 text-lg leading-relaxed">
+          <p class="text-gray-300 text-[17px] leading-relaxed">
             Hi! I'm Nizam — a tech enthusiast from Indonesia who loves building websites, developing games, and exploring digital creativity. I'm currently studying at SMPN 18 Kota Tangerang Selatan. In my free time, I experiment with Unity, Unreal Engine, and Roblox, while crafting fun web projects like this one to learn and grow.
+            <span class="hidden lg:block">Also, have you ever tried pressing F12 and go to Console?</span>
+            <span class="block lg:hidden">Also, have you ever tried clicking the menu button 50 times in a row?</span>
           </p>
         </div>
       </div>

@@ -24,18 +24,6 @@
   font-family: 'Perfectly Nineties', sans-serif;
 }
 
-/* SF Pro Regular */
-@font-face {
-  font-family: 'SF Pro Regular';
-  src: url('../fonts/SF-Pro-Display-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-.font-sfpro-regular {
-  font-family: 'SF Pro Regular', sans-serif;
-}
-
 /* Open Sauce Regular */
 @font-face {
   font-family: 'Open Sauce Regular';
