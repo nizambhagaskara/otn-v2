@@ -218,7 +218,7 @@ body.wigglywobble {
 /* Common hidden state */
 .scroll-up, .fade-in, .scroll-left, .scroll-right, .fade-horizontal {
   opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 /* Visible state */

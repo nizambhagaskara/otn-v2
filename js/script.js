@@ -125,40 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     wobblemobile.classList.add("flex");
   }
 
-  const cards = document.querySelectorAll('.card');
-  const overlay = document.getElementById('overlay');
-
-  cards.forEach(card => {
-    const cover = card.querySelector('.cover');
-
-    card.addEventListener('click', () => {
-      const isFullscreen = card.classList.contains('fullscreen');
-
-      // Reset all cards
-      cards.forEach(c => {
-        c.classList.remove('fullscreen');
-        c.querySelector('.cover').classList.remove('card-flipped');
-      });
-      overlay.classList.add('opacity-0', 'pointer-events-none');
-
-      if (!isFullscreen) {
-        // Open this card
-        card.classList.add('fullscreen');
-        cover.classList.add('card-flipped');
-        overlay.classList.remove('opacity-0', 'pointer-events-none');
-      }
-    });
-  });
-
-  // Close when clicking overlay
-  overlay.addEventListener('click', () => {
-    overlay.classList.add('opacity-0', 'pointer-events-none');
-    cards.forEach(c => {
-      c.classList.remove('fullscreen');
-      c.querySelector('.cover').classList.remove('card-flipped');
-    });
-  });
-
   document.querySelectorAll('.delay').forEach(el => {
     el.addEventListener('click', e => {
       e.preventDefault();
