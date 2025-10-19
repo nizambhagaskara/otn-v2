@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveLink(initialHash);
   handleHomeLink();
 
-  // header scrolled class (you already had this)
+  // header scrolled class
   const header = document.getElementById("mainHeader");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) header.classList.add("scrolled");
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Select all scroll-animation elements
   const scrollElements = document.querySelectorAll(
-    '.scroll-up, .scroll-left, .scroll-right, .fade-in, .fade-horizontal'
+    '.scroll-up, .scroll-left, .scroll-right'
   );
 
   // IntersectionObserver to trigger animation when element is in viewport
@@ -171,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const el = entry.target;
 
-        // Optional: add tiny stagger for multiple elements entering at once
         el.style.transitionDelay = `${index * 80}ms`;
 
         el.classList.add('show');   // add class to animate
@@ -183,5 +182,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Observe all scroll elements
   scrollElements.forEach(el => animObserver.observe(el));
-
 });
