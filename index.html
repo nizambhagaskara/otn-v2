@@ -13,9 +13,6 @@
 
     <link rel="preload" href="img/cityscape.webp" as="image" type="image/webp" fetchpriority="high">
     
-    <link rel="preload" href="fonts/subset-SFProDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/subset-SFProDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    
     <link rel="preload" href="css/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/output.css"></noscript>
 
@@ -29,6 +26,11 @@
 
     <link rel="preload" href="fonts/PerfectlyNineties-RegularItalic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/OpenSauceSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="prefetch" href="img/yt.webp" as="image" type="image/webp">
+    <link rel="prefetch" href="img/wa.webp" as="image" type="image/webp">
+    <link rel="prefetch" href="img/ig.webp" as="image" type="image/webp">
+    <link rel="prefetch" href="img/rblx.webp" as="image" type="image/webp">
   </head>
   <body class="bg-gray-950 !overflow-x-hidden font-sans font-normal">
     <!-- Header -->
@@ -352,7 +354,7 @@
       </div>
 
       <!-- RTX 5090 -->
-      <div id="rtx5090" class="relative w-full min-h-[800px]">
+      <div id="rtx5090" class="relative w-full min-h-full lg:min-h-[800px]">
         <!-- Desktop Background Image -->
         <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/"><img src="img/rtx5090.webp" alt="Nvidia RTX 5090" class="hidden lg:block absolute inset-0 w-full h-full object-cover object-[60%_center] z-0" loading="lazy" decoding="async"></a>
 
@@ -377,12 +379,16 @@
       </div>
 
       <!-- Unreal Engine 5 -->
-      <div id="ue5" class="relative w-full min-h-[800px]">
+      <div id="ue5" class="relative w-full min-h-full lg:min-h-[800px]">
         <!-- Desktop Background Image -->
-        <a href="https://www.unrealengine.com/en-US/unreal-engine-5"><img src="img/ue5.webp" alt="Unreal Engine 5 Lumen and Nanite" class="hidden lg:block absolute inset-0 w-full h-full object-cover object-center z-0 -translate-x-60 brightness-150" loading="lazy" decoding="async"></a>
+        <a href="https://www.unrealengine.com/en-US/unreal-engine-5">
+          <img src="img/ue5.webp" alt="Unreal Engine 5 Lumen and Nanite"
+              class="hidden lg:block absolute inset-0 w-full h-full object-cover object-center z-0 -translate-x-60 brightness-150"
+              loading="lazy" decoding="async">
+        </a>
 
-        <!-- Horizontal fade (left to right) -->
-        <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-transparent to-gray-950 -translate-x-56 z-10"></div>
+        <!-- Right fade -->
+        <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-transparent via-gray-950/50 to-gray-950/100 -translate-x-56 z-10 pointer-events-none"></div>
 
         <!-- Top & Bottom fades -->
         <div class="hidden lg:block absolute top-0 left-0 w-full h-56 bg-gradient-to-t from-transparent to-gray-950 z-10"></div>
@@ -442,7 +448,7 @@
         <!-- Social Icons -->
         <div class="w-full md:w-1/2 flex flex-col gap-4 py-5 md:px-5">
           <h4 class="text-3xl font-bold text-white mb-1">Follow My Journey</h4>
-          <div class="flex flex-row md:flex-col xl:flex-row gap-4 w-full">
+          <div class="flex flex-row md:flex-col lg:flex-row gap-4 w-full">
             <!-- YouTube -->
             <a href="https://www.youtube.com/@nizambhagaskara" target="_blank" class="w-14 h-14 delay rounded-full overflow-hidden bg-transparent border-2 border-white/40 flex items-center justify-center hover:w-full transition-all duration-500 ease-in-out group hover:bg-[url('../img/yt.webp')] hover:bg-[center_40%] hover:bg-cover relative">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-1/2 h-full group-hover:scale-0 transition duration-300 ease-in-out" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg>
